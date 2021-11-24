@@ -135,14 +135,29 @@
         <!--Friends-->
         <scene sceneID="n9h-6m-DkU">
             <objects>
-                <viewController id="urN-bQ-7OM" sceneMemberID="viewController">
+                <viewController id="urN-bQ-7OM" customClass="FriendsViewController" customModule="vkClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="av0-tG-8Hv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7LC-PI-x3V">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JrU-0U-h0d"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="JrU-0U-h0d" firstAttribute="bottom" secondItem="7LC-PI-x3V" secondAttribute="bottom" id="8BE-qO-rqq"/>
+                            <constraint firstItem="7LC-PI-x3V" firstAttribute="leading" secondItem="JrU-0U-h0d" secondAttribute="leading" id="BnI-QI-pcr"/>
+                            <constraint firstItem="JrU-0U-h0d" firstAttribute="trailing" secondItem="7LC-PI-x3V" secondAttribute="trailing" id="Kz5-HQ-B38"/>
+                            <constraint firstItem="7LC-PI-x3V" firstAttribute="top" secondItem="JrU-0U-h0d" secondAttribute="top" id="oXl-JC-p1L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="HKc-4Y-JBq"/>
+                    <connections>
+                        <outlet property="tableView" destination="7LC-PI-x3V" id="YJN-i8-aSv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLA-6P-Ucp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,12 +181,24 @@
         <!--Groups-->
         <scene sceneID="bTh-IC-rma">
             <objects>
-                <viewController id="wX7-Wn-NPe" sceneMemberID="viewController">
+                <viewController id="wX7-Wn-NPe" customClass="MyGroupViewController" customModule="vkClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F1x-uH-8tx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qwd-LU-ati">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lLt-8s-hqG"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="Qwd-LU-ati" firstAttribute="leading" secondItem="lLt-8s-hqG" secondAttribute="leading" id="Axw-8v-n5a"/>
+                            <constraint firstItem="Qwd-LU-ati" firstAttribute="top" secondItem="lLt-8s-hqG" secondAttribute="top" id="NPx-ZS-Dzx"/>
+                            <constraint firstItem="lLt-8s-hqG" firstAttribute="bottom" secondItem="Qwd-LU-ati" secondAttribute="bottom" id="b61-pv-qgk"/>
+                            <constraint firstItem="lLt-8s-hqG" firstAttribute="trailing" secondItem="Qwd-LU-ati" secondAttribute="trailing" id="lxZ-aB-snv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Groups" id="h5u-Mj-6Xc">
                         <barButtonItem key="rightBarButtonItem" title="add group" id="qel-zP-slN">
@@ -180,22 +207,40 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Qwd-LU-ati" id="lOh-4z-ku9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8g-Ie-Z0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3690" y="642"/>
         </scene>
-        <!--View Controller-->
+        <!--All Groups-->
         <scene sceneID="f3t-Tz-lG6">
             <objects>
-                <viewController id="O4Z-SP-AfS" sceneMemberID="viewController">
+                <viewController id="O4Z-SP-AfS" customClass="AllGroupViewController" customModule="vkClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vsU-W4-YaE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u2y-Xa-5MT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Okb-nW-Csv"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="u2y-Xa-5MT" firstAttribute="top" secondItem="Okb-nW-Csv" secondAttribute="top" id="BZO-5c-q8V"/>
+                            <constraint firstItem="Okb-nW-Csv" firstAttribute="bottom" secondItem="u2y-Xa-5MT" secondAttribute="bottom" id="Wb0-5P-3Ia"/>
+                            <constraint firstItem="Okb-nW-Csv" firstAttribute="trailing" secondItem="u2y-Xa-5MT" secondAttribute="trailing" id="YSG-Fz-Nbx"/>
+                            <constraint firstItem="u2y-Xa-5MT" firstAttribute="leading" secondItem="Okb-nW-Csv" secondAttribute="leading" id="ZQo-oh-TZI"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oPC-5U-cca"/>
+                    <navigationItem key="navigationItem" title="All Groups" id="oPC-5U-cca"/>
+                    <connections>
+                        <outlet property="tableView" destination="u2y-Xa-5MT" id="Dqo-l5-vVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dps-kn-QYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,6 +253,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="zeO-VJ-rFD"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cy5-8k-emH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
