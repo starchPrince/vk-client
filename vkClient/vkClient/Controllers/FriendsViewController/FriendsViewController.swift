@@ -16,6 +16,7 @@ class FriendsViewController: UIViewController {
     
     let customCellREuseIdentifier = "customCellREuseIdentifier"
     let heightCustomTableViewCell: CGFloat = 45
+    let toGalerySegue = "toGalerySegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
