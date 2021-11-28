@@ -22,7 +22,8 @@ extension MyGroupViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: customCellREuseIdentifier, for: indexPath) as? CustomTableViewCell else {return UITableViewCell()}
         
-        cell.configure(image: nil, text: sourceArray[indexPath.row])
+
+        cell.configure(group: sourceArray[indexPath.row])
         return cell
     }
     
