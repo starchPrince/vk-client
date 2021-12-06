@@ -11,42 +11,52 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GalleryCell" customModule="vkClient" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="222" height="192"/>
+            <rect key="frame" x="0.0" y="0.0" width="303" height="323"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="222" height="192"/>
+                <rect key="frame" x="0.0" y="0.0" width="303" height="323"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4g-7x-jCg">
-                        <rect key="frame" x="0.0" y="44" width="222" height="148"/>
+                        <rect key="frame" x="0.0" y="44" width="303" height="279"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="drc-8q-2DT">
-                                <rect key="frame" x="15" y="15" width="192" height="118"/>
+                                <rect key="frame" x="15" y="15" width="273" height="209"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM5-sE-0Tk" customClass="likeControlView" customModule="vkClient" customModuleProvider="target">
+                                <rect key="frame" x="15" y="229" width="273" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hQA-aS-G5k"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="drc-8q-2DT" secondAttribute="bottom" constant="15" id="6RC-Ki-bQV"/>
-                            <constraint firstItem="drc-8q-2DT" firstAttribute="leading" secondItem="i4g-7x-jCg" secondAttribute="leading" constant="15" id="RnE-VO-8hc"/>
-                            <constraint firstAttribute="trailing" secondItem="drc-8q-2DT" secondAttribute="trailing" constant="15" id="bzj-ck-73L"/>
-                            <constraint firstItem="drc-8q-2DT" firstAttribute="top" secondItem="i4g-7x-jCg" secondAttribute="top" constant="15" id="c4g-ZD-Zuv"/>
+                            <constraint firstItem="drc-8q-2DT" firstAttribute="leading" secondItem="i4g-7x-jCg" secondAttribute="leading" constant="15" id="6sy-HO-hrH"/>
+                            <constraint firstItem="NM5-sE-0Tk" firstAttribute="top" secondItem="drc-8q-2DT" secondAttribute="bottom" constant="5" id="AzU-Sk-FCa"/>
+                            <constraint firstAttribute="trailing" secondItem="NM5-sE-0Tk" secondAttribute="trailing" constant="15" id="KfC-ao-BVs"/>
+                            <constraint firstAttribute="trailing" secondItem="drc-8q-2DT" secondAttribute="trailing" constant="15" id="Q36-Ek-NCJ"/>
+                            <constraint firstItem="drc-8q-2DT" firstAttribute="top" secondItem="i4g-7x-jCg" secondAttribute="top" constant="15" id="Rqc-Sj-ozu"/>
+                            <constraint firstAttribute="bottom" secondItem="NM5-sE-0Tk" secondAttribute="bottom" constant="5" id="VUi-1f-PKQ"/>
+                            <constraint firstItem="NM5-sE-0Tk" firstAttribute="leading" secondItem="i4g-7x-jCg" secondAttribute="leading" constant="15" id="guF-SW-t0a"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="i4g-7x-jCg" secondAttribute="bottom" id="1lt-zH-yQF"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="i4g-7x-jCg" secondAttribute="top" id="b8y-Y2-5zc"/>
-                <constraint firstItem="i4g-7x-jCg" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="ghO-PR-er9"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="i4g-7x-jCg" secondAttribute="trailing" id="o2s-cL-Uqq"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="i4g-7x-jCg" secondAttribute="bottom" id="Fmy-mU-zRu"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="i4g-7x-jCg" secondAttribute="trailing" id="WBZ-YJ-V2W"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="i4g-7x-jCg" secondAttribute="top" id="mII-pQ-6gz"/>
+                <constraint firstItem="i4g-7x-jCg" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="mhx-JF-aer"/>
             </constraints>
-            <size key="customSize" width="222" height="192"/>
+            <size key="customSize" width="303" height="323"/>
             <connections>
                 <outlet property="backView" destination="i4g-7x-jCg" id="zXP-yX-cWW"/>
                 <outlet property="photoImageView" destination="drc-8q-2DT" id="xXG-xj-k2Q"/>
             </connections>
-            <point key="canvasLocation" x="256.52173913043481" y="157.36607142857142"/>
+            <point key="canvasLocation" x="303.62318840579712" y="198.54910714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

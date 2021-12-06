@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,34 +17,52 @@
                 <rect key="frame" x="0.0" y="0.0" width="415" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1X-Gg-8BJ">
-                        <rect key="frame" x="7" y="12" width="59" height="59"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7O-cz-1Hx">
+                        <rect key="frame" x="7" y="9" width="83" height="65"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tGq-nj-qmg">
+                                <rect key="frame" x="9" y="1" width="65" height="63"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="Y1X-Gg-8BJ" secondAttribute="height" multiplier="1:1" id="XIS-Es-5aH"/>
+                            <constraint firstItem="tGq-nj-qmg" firstAttribute="centerX" secondItem="P7O-cz-1Hx" secondAttribute="centerX" id="TKi-au-3Eg"/>
+                            <constraint firstItem="tGq-nj-qmg" firstAttribute="centerY" secondItem="P7O-cz-1Hx" secondAttribute="centerY" id="XGG-NA-wrg"/>
+                            <constraint firstItem="tGq-nj-qmg" firstAttribute="width" secondItem="P7O-cz-1Hx" secondAttribute="height" multiplier="1:1" id="b5G-wm-mp4"/>
+                            <constraint firstItem="tGq-nj-qmg" firstAttribute="top" secondItem="P7O-cz-1Hx" secondAttribute="top" constant="1" id="sND-fM-C90"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGe-1U-okh">
-                        <rect key="frame" x="74" y="31" width="333" height="21"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nk0-jx-4S6">
+                        <rect key="frame" x="97" y="31" width="311" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="MGe-1U-okh" secondAttribute="trailing" constant="8" id="Lrb-Vb-Laj"/>
-                    <constraint firstItem="Y1X-Gg-8BJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="QkL-tr-KE8"/>
-                    <constraint firstItem="Y1X-Gg-8BJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="a1p-JL-mo2"/>
-                    <constraint firstItem="Y1X-Gg-8BJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bEm-FD-k60"/>
-                    <constraint firstItem="MGe-1U-okh" firstAttribute="leading" secondItem="Y1X-Gg-8BJ" secondAttribute="trailing" constant="8" id="xJE-gc-uEU"/>
-                    <constraint firstItem="MGe-1U-okh" firstAttribute="centerY" secondItem="Y1X-Gg-8BJ" secondAttribute="centerY" id="yga-rB-Bg9"/>
+                    <constraint firstAttribute="trailing" secondItem="Nk0-jx-4S6" secondAttribute="trailing" constant="7" id="BmZ-0I-DBS"/>
+                    <constraint firstItem="Nk0-jx-4S6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dxp-X2-luX"/>
+                    <constraint firstItem="P7O-cz-1Hx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Etu-u1-HB2"/>
+                    <constraint firstItem="P7O-cz-1Hx" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:1" id="GzT-8b-8NZ"/>
+                    <constraint firstItem="Nk0-jx-4S6" firstAttribute="leading" secondItem="P7O-cz-1Hx" secondAttribute="trailing" constant="7" id="TTu-Wh-ElM"/>
+                    <constraint firstItem="P7O-cz-1Hx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="aCb-be-MsM"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="P7O-cz-1Hx" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="7" id="Mor-A3-A1L"/>
+            </constraints>
             <connections>
-                <outlet property="avatarImageView" destination="Y1X-Gg-8BJ" id="D3d-zd-QDm"/>
-                <outlet property="nameLabel" destination="MGe-1U-okh" id="r1R-3f-pfs"/>
+                <outlet property="avatarImageView" destination="tGq-nj-qmg" id="0HU-gX-mlQ"/>
+                <outlet property="backView" destination="P7O-cz-1Hx" id="IEx-Pf-fra"/>
+                <outlet property="nameLabel" destination="Nk0-jx-4S6" id="myH-oJ-9eF"/>
             </connections>
             <point key="canvasLocation" x="200.72463768115944" y="92.745535714285708"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

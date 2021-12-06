@@ -10,7 +10,7 @@ import UIKit
 class FriendsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var searchFriendsView: UISearchBar!
     
     var friendsArray = [Friend]()
     

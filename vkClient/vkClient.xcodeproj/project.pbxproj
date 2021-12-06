@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0609DA2758BB1700FA6F5A /* likeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0609D92758BB1700FA6F5A /* likeControlView.swift */; };
+		0E0609DC2758BB3A00FA6F5A /* likeControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E0609DB2758BB3A00FA6F5A /* likeControlView.xib */; };
+		0E17FBAB27581D1C00AB2FB4 /* photoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17FBAA27581D1C00AB2FB4 /* photoViewController.swift */; };
 		0E3F0E172753771F00AF5E4C /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F0E162753771F00AF5E4C /* GalleryViewController.swift */; };
 		0E3F0E1B27537B4F00AF5E4C /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F0E1927537B4F00AF5E4C /* GalleryCell.swift */; };
 		0E3F0E1C27537B4F00AF5E4C /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E3F0E1A27537B4F00AF5E4C /* GalleryCell.xib */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0609D92758BB1700FA6F5A /* likeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeControlView.swift; sourceTree = "<group>"; };
+		0E0609DB2758BB3A00FA6F5A /* likeControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = likeControlView.xib; sourceTree = "<group>"; };
+		0E17FBAA27581D1C00AB2FB4 /* photoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoViewController.swift; sourceTree = "<group>"; };
 		0E3F0E162753771F00AF5E4C /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		0E3F0E1927537B4F00AF5E4C /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		0E3F0E1A27537B4F00AF5E4C /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
@@ -73,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E0609D82758BAC500FA6F5A /* likeController */ = {
+			isa = PBXGroup;
+			children = (
+				0E0609D92758BB1700FA6F5A /* likeControlView.swift */,
+				0E0609DB2758BB3A00FA6F5A /* likeControlView.xib */,
+			);
+			path = likeController;
+			sourceTree = "<group>";
+		};
+		0E17FBA927581C9C00AB2FB4 /* PhotoController */ = {
+			isa = PBXGroup;
+			children = (
+				0E17FBAA27581D1C00AB2FB4 /* photoViewController.swift */,
+			);
+			path = PhotoController;
+			sourceTree = "<group>";
+		};
 		0E3F0E15275376F300AF5E4C /* GalleryController */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +117,8 @@
 		0ED18751274EBDFD0096A2E1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E0609D82758BAC500FA6F5A /* likeController */,
+				0E17FBA927581C9C00AB2FB4 /* PhotoController */,
 				0E3F0E15275376F300AF5E4C /* GalleryController */,
 				0ED18763274EC79E0096A2E1 /* AllGroupViewController */,
 				0ED1875C274EC51D0096A2E1 /* MyGroupViewController */,
@@ -248,6 +273,7 @@
 				0EE931D92740558F002EC632 /* Assets.xcassets in Resources */,
 				0ED18756274EBEEF0096A2E1 /* CustomTableViewCell.xib in Resources */,
 				0EE931D72740558F002EC632 /* Main.storyboard in Resources */,
+				0E0609DC2758BB3A00FA6F5A /* likeControlView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +289,7 @@
 				0ED18750274EBDCB0096A2E1 /* FriendsViewController.swift in Sources */,
 				0ED1876E274ECB6E0096A2E1 /* Group.swift in Sources */,
 				0ED18760274EC5B20096A2E1 /* MyGroupViewController+TableViewDataSource.swift in Sources */,
+				0E17FBAB27581D1C00AB2FB4 /* photoViewController.swift in Sources */,
 				0ED18770274ED1660096A2E1 /* FriendsViewController+FillData.swift in Sources */,
 				0ED18755274EBEEF0096A2E1 /* CustomTableViewCell.swift in Sources */,
 				0ED18769274EC8410096A2E1 /* AllGroupViewController+TableViewDelegate.swift in Sources */,
@@ -273,6 +300,7 @@
 				0EE931D02740558F002EC632 /* AppDelegate.swift in Sources */,
 				0ED18765274EC7F40096A2E1 /* AllGroupViewController.swift in Sources */,
 				0ED18772274ED6210096A2E1 /* AllGroupViewController+FillData.swift in Sources */,
+				0E0609DA2758BB1700FA6F5A /* likeControlView.swift in Sources */,
 				0E3F0E1B27537B4F00AF5E4C /* GalleryCell.swift in Sources */,
 				0E3F0E172753771F00AF5E4C /* GalleryViewController.swift in Sources */,
 				0EE931D22740558F002EC632 /* SceneDelegate.swift in Sources */,

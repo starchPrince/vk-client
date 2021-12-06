@@ -68,6 +68,10 @@ extension GalleryViewController: UICollectionViewDelegate {
         
         print("index \(String(indexPath.item))")
         
+        let fullPhotoVC = storyboard?.instantiateViewController(withIdentifier: "photoVC") as! photoViewController
+        fullPhotoVC.setup(with: sourceArray[indexPath.row])
+        self.navigationController?.pushViewController(fullPhotoVC, animated: true)
+        
         
     }
     
