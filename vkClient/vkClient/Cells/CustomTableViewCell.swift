@@ -13,6 +13,9 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var backView: UIView!
     
+    var closure: (() -> Void)?
+    
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         avatarImageView.image = nil
@@ -40,11 +43,12 @@ class CustomTableViewCell: UITableViewCell {
         
     }
     
-    func configure(frined: Friend) {
+    func configure(frined: Friend, closure:@escaping (() -> Void)) {
         if let imageName = frined.avatar {
         avatarImageView.image = UIImage(named: imageName)
         }
         nameLabel.text = frined.name
+        self.closure = closure
     }
     
     func configure(group: Group) {
@@ -53,6 +57,38 @@ class CustomTableViewCell: UITableViewCell {
         }
         nameLabel.text = group.name
     }
+    
+    
+    @IBAction func pressImageViewButton(_ sender: UIButton) {
+        
+        let sourceFrame = avatarImageView.frame
+        
+        UIView.animate(withDuration: 2) {[weak self] in
+            guard let self = self else {return}
+            self.avatarImageView.frame = CGRect.zero
+        } completion: { isSuccess  in
+            if isSuccess {
+                UIView.animate(withDuration: 2,
+                               delay: 0,
+                               usingSpringWithDamping: 0.7,
+                               initialSpringVelocity: 0,
+                               options: [],
+                               animations: { [weak self] in
+                    guard let self = self else {return}
+                    self.avatarImageView.frame = sourceFrame
+                    
+                },
+                               completion: {
+                    isSuccessFully in
+                    if isSuccessFully {
+                        self.closure?()
+                    }
+                    
+                })
+            }
+        }
 
+    }
+    
   
 }

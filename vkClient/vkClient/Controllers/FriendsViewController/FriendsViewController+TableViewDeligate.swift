@@ -22,11 +22,11 @@ extension FriendsViewController: UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let friendsPhotoArray = friendsArray[indexPath.item].photoArray {
-        performSegue(withIdentifier: toGalerySegue, sender: friendsPhotoArray)
-        }
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let friendsPhotoArray = friendsArray[indexPath.item].photoArray {
+//        performSegue(withIdentifier: toGalerySegue, sender: friendsPhotoArray)
+//        }
+//    }
     
     
 }
